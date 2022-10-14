@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent</title>
+    <style>
+        body{
+            background-color:#202628;
+        }
+        .center-body{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            width:100%;
+            height:100vh;
+        }
+        .loader-triangle-3 polygon{
+            stroke:#ffeb3b;
+            stroke: #fff;
+            stroke-dasharray: 17;
+            animation: anm-tr-3-move 2.5s
+                 cubic-bezier(0.35,0.04,0.63,0.95)infinite;
+
+        }
+        @keyframes anm-tr-3-move{
+            to{
+                stroke-dashoffset: -136;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="center-body">
+        <div class="loader-triangle-3">
+            <svg id="traingel" width="50px" height="50px" viewbox="-3 -4 39 39">
+                <polygon fill="transparent" stroke="#ffeb3b" strok-width="2" points="16,0 32,32 0,32">
+
+                </polygon>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
